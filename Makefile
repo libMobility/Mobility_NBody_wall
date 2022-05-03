@@ -1,6 +1,6 @@
-NVCC=nvcc
+CXX=g++
+NVCC=nvcc -ccbin=$(CXX)
 
-#DOUBLEPRECISION = -DDOUBLE_PRECISION
 all: mobility_cuda.o
 
 mobility_cuda.o: mobility_kernels.cu
